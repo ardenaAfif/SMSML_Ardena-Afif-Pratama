@@ -1,0 +1,134 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.3.2
+is_signature_from_type_hint: false
+mlflow_version: 2.22.1
+model_size_bytes: 5543675
+model_uuid: 6a1f8d590fb1457086423f1f3939c3ea
+prompts: null
+run_id: 64459387007341518ce23cb0c006d07b
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "double",
+    "name": "Purchase Amount (USD)", "required": true}, {"type": "double", "name":
+    "Review Rating", "required": true}, {"type": "double", "name": "Previous Purchases",
+    "required": true}, {"type": "double", "name": "Gender_Male", "required": true},
+    {"type": "double", "name": "Item Purchased_Belt", "required": true}, {"type":
+    "double", "name": "Item Purchased_Blouse", "required": true}, {"type": "double",
+    "name": "Item Purchased_Boots", "required": true}, {"type": "double", "name":
+    "Item Purchased_Coat", "required": true}, {"type": "double", "name": "Item Purchased_Dress",
+    "required": true}, {"type": "double", "name": "Item Purchased_Gloves", "required":
+    true}, {"type": "double", "name": "Item Purchased_Handbag", "required": true},
+    {"type": "double", "name": "Item Purchased_Hat", "required": true}, {"type": "double",
+    "name": "Item Purchased_Hoodie", "required": true}, {"type": "double", "name":
+    "Item Purchased_Jacket", "required": true}, {"type": "double", "name": "Item Purchased_Jeans",
+    "required": true}, {"type": "double", "name": "Item Purchased_Jewelry", "required":
+    true}, {"type": "double", "name": "Item Purchased_Pants", "required": true}, {"type":
+    "double", "name": "Item Purchased_Sandals", "required": true}, {"type": "double",
+    "name": "Item Purchased_Scarf", "required": true}, {"type": "double", "name":
+    "Item Purchased_Shirt", "required": true}, {"type": "double", "name": "Item Purchased_Shoes",
+    "required": true}, {"type": "double", "name": "Item Purchased_Shorts", "required":
+    true}, {"type": "double", "name": "Item Purchased_Skirt", "required": true}, {"type":
+    "double", "name": "Item Purchased_Sneakers", "required": true}, {"type": "double",
+    "name": "Item Purchased_Socks", "required": true}, {"type": "double", "name":
+    "Item Purchased_Sunglasses", "required": true}, {"type": "double", "name": "Item
+    Purchased_Sweater", "required": true}, {"type": "double", "name": "Item Purchased_T-shirt",
+    "required": true}, {"type": "double", "name": "Location_Alaska", "required": true},
+    {"type": "double", "name": "Location_Arizona", "required": true}, {"type": "double",
+    "name": "Location_Arkansas", "required": true}, {"type": "double", "name": "Location_California",
+    "required": true}, {"type": "double", "name": "Location_Colorado", "required":
+    true}, {"type": "double", "name": "Location_Connecticut", "required": true}, {"type":
+    "double", "name": "Location_Delaware", "required": true}, {"type": "double", "name":
+    "Location_Florida", "required": true}, {"type": "double", "name": "Location_Georgia",
+    "required": true}, {"type": "double", "name": "Location_Hawaii", "required": true},
+    {"type": "double", "name": "Location_Idaho", "required": true}, {"type": "double",
+    "name": "Location_Illinois", "required": true}, {"type": "double", "name": "Location_Indiana",
+    "required": true}, {"type": "double", "name": "Location_Iowa", "required": true},
+    {"type": "double", "name": "Location_Kansas", "required": true}, {"type": "double",
+    "name": "Location_Kentucky", "required": true}, {"type": "double", "name": "Location_Louisiana",
+    "required": true}, {"type": "double", "name": "Location_Maine", "required": true},
+    {"type": "double", "name": "Location_Maryland", "required": true}, {"type": "double",
+    "name": "Location_Massachusetts", "required": true}, {"type": "double", "name":
+    "Location_Michigan", "required": true}, {"type": "double", "name": "Location_Minnesota",
+    "required": true}, {"type": "double", "name": "Location_Mississippi", "required":
+    true}, {"type": "double", "name": "Location_Missouri", "required": true}, {"type":
+    "double", "name": "Location_Montana", "required": true}, {"type": "double", "name":
+    "Location_Nebraska", "required": true}, {"type": "double", "name": "Location_Nevada",
+    "required": true}, {"type": "double", "name": "Location_New Hampshire", "required":
+    true}, {"type": "double", "name": "Location_New Jersey", "required": true}, {"type":
+    "double", "name": "Location_New Mexico", "required": true}, {"type": "double",
+    "name": "Location_New York", "required": true}, {"type": "double", "name": "Location_North
+    Carolina", "required": true}, {"type": "double", "name": "Location_North Dakota",
+    "required": true}, {"type": "double", "name": "Location_Ohio", "required": true},
+    {"type": "double", "name": "Location_Oklahoma", "required": true}, {"type": "double",
+    "name": "Location_Oregon", "required": true}, {"type": "double", "name": "Location_Pennsylvania",
+    "required": true}, {"type": "double", "name": "Location_Rhode Island", "required":
+    true}, {"type": "double", "name": "Location_South Carolina", "required": true},
+    {"type": "double", "name": "Location_South Dakota", "required": true}, {"type":
+    "double", "name": "Location_Tennessee", "required": true}, {"type": "double",
+    "name": "Location_Texas", "required": true}, {"type": "double", "name": "Location_Utah",
+    "required": true}, {"type": "double", "name": "Location_Vermont", "required":
+    true}, {"type": "double", "name": "Location_Virginia", "required": true}, {"type":
+    "double", "name": "Location_Washington", "required": true}, {"type": "double",
+    "name": "Location_West Virginia", "required": true}, {"type": "double", "name":
+    "Location_Wisconsin", "required": true}, {"type": "double", "name": "Location_Wyoming",
+    "required": true}, {"type": "double", "name": "Size_M", "required": true}, {"type":
+    "double", "name": "Size_S", "required": true}, {"type": "double", "name": "Size_XL",
+    "required": true}, {"type": "double", "name": "Color_Black", "required": true},
+    {"type": "double", "name": "Color_Blue", "required": true}, {"type": "double",
+    "name": "Color_Brown", "required": true}, {"type": "double", "name": "Color_Charcoal",
+    "required": true}, {"type": "double", "name": "Color_Cyan", "required": true},
+    {"type": "double", "name": "Color_Gold", "required": true}, {"type": "double",
+    "name": "Color_Gray", "required": true}, {"type": "double", "name": "Color_Green",
+    "required": true}, {"type": "double", "name": "Color_Indigo", "required": true},
+    {"type": "double", "name": "Color_Lavender", "required": true}, {"type": "double",
+    "name": "Color_Magenta", "required": true}, {"type": "double", "name": "Color_Maroon",
+    "required": true}, {"type": "double", "name": "Color_Olive", "required": true},
+    {"type": "double", "name": "Color_Orange", "required": true}, {"type": "double",
+    "name": "Color_Peach", "required": true}, {"type": "double", "name": "Color_Pink",
+    "required": true}, {"type": "double", "name": "Color_Purple", "required": true},
+    {"type": "double", "name": "Color_Red", "required": true}, {"type": "double",
+    "name": "Color_Silver", "required": true}, {"type": "double", "name": "Color_Teal",
+    "required": true}, {"type": "double", "name": "Color_Turquoise", "required": true},
+    {"type": "double", "name": "Color_Violet", "required": true}, {"type": "double",
+    "name": "Color_White", "required": true}, {"type": "double", "name": "Color_Yellow",
+    "required": true}, {"type": "double", "name": "Season_Spring", "required": true},
+    {"type": "double", "name": "Season_Summer", "required": true}, {"type": "double",
+    "name": "Season_Winter", "required": true}, {"type": "double", "name": "Subscription
+    Status_Yes", "required": true}, {"type": "double", "name": "Payment Method_Cash",
+    "required": true}, {"type": "double", "name": "Payment Method_Credit Card", "required":
+    true}, {"type": "double", "name": "Payment Method_Debit Card", "required": true},
+    {"type": "double", "name": "Payment Method_PayPal", "required": true}, {"type":
+    "double", "name": "Payment Method_Venmo", "required": true}, {"type": "double",
+    "name": "Shipping Type_Express", "required": true}, {"type": "double", "name":
+    "Shipping Type_Free Shipping", "required": true}, {"type": "double", "name": "Shipping
+    Type_Next Day Air", "required": true}, {"type": "double", "name": "Shipping Type_Standard",
+    "required": true}, {"type": "double", "name": "Shipping Type_Store Pickup", "required":
+    true}, {"type": "double", "name": "Discount Applied_Yes", "required": true}, {"type":
+    "double", "name": "Promo Code Used_Yes", "required": true}, {"type": "double",
+    "name": "Preferred Payment Method_Cash", "required": true}, {"type": "double",
+    "name": "Preferred Payment Method_Credit Card", "required": true}, {"type": "double",
+    "name": "Preferred Payment Method_Debit Card", "required": true}, {"type": "double",
+    "name": "Preferred Payment Method_PayPal", "required": true}, {"type": "double",
+    "name": "Preferred Payment Method_Venmo", "required": true}, {"type": "double",
+    "name": "Frequency of Purchases_Bi-Weekly", "required": true}, {"type": "double",
+    "name": "Frequency of Purchases_Every 3 Months", "required": true}, {"type": "double",
+    "name": "Frequency of Purchases_Fortnightly", "required": true}, {"type": "double",
+    "name": "Frequency of Purchases_Monthly", "required": true}, {"type": "double",
+    "name": "Frequency of Purchases_Quarterly", "required": true}, {"type": "double",
+    "name": "Frequency of Purchases_Weekly", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-08 17:55:24.070876'

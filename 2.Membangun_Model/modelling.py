@@ -1,18 +1,42 @@
-from modelling_tuning import init_mlflow, load_and_split_data, train_and_log_model, PROCESSED_DATA_PATH
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import mlflow
+import mlflow.sklearn
+
+# Aktifkan autolog dari MLflow
+mlflow.autolog()
+
+# Path ke data hasil preprocessing
+PROCESSED_DATA_PATH = "processed_shopping_trends.csv"
+
+def load_and_split_data(path):
+    try:
+        df = pd.read_csv(path)
+        print("Data berhasil dibaca.")
+
+        X = df.iloc[:, :-1]
+        y = df.iloc[:, -1]
+        print(f"Kolom target: {df.columns[-1]}")
+
+        return train_test_split(X, y, test_size=0.2, random_state=42)
+    except Exception as e:
+        print(f"Error saat memuat data: {e}")
+        return None, None, None, None
 
 if __name__ == "__main__":
-    print("--- Memulai Script modelling.py (memanggil modelling_tuning untuk Klasifikasi) ---")
+    print("--- Memulai Script modelling.py ---")
+
+    X_train, X_test, y_train, y_test = load_and_split_data(PROCESSED_DATA_PATH)
+
+    if X_train is not None:
+        with mlflow.start_run():
+            model = RandomForestClassifier(random_state=42)
+            model.fit(X_train, y_train)
+
+            y_pred = model.predict(X_test)
+            acc = accuracy_score(y_test, y_pred)
+            print(f"Akurasi: {acc}")
     
-    mlflow_initialized_successfully = init_mlflow()
-    
-    if mlflow_initialized_successfully:
-        # Memastikan semua return value dari load_and_split_data ditangkap
-        X_train, X_test, y_train, y_test, feature_names, class_labels_int = load_and_split_data(PROCESSED_DATA_PATH)
-    
-        if X_train is not None and y_train is not None: # Cek y_train juga
-            # Memanggil fungsi train_and_log_model (sesuai nama di modelling_tuning.py Anda)
-            train_and_log_model(X_train, y_train, X_test, y_test, feature_names, class_labels_int)
-    else:
-        print("Inisialisasi MLflow gagal. Script modelling.py tidak dapat melanjutkan.")
-        
-    print("--- Script modelling.py (Klasifikasi) Selesai ---")
+    print("--- Script modelling.py Selesai ---")

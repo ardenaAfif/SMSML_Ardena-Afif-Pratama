@@ -1,0 +1,15 @@
+artifact_uri: file:///Volumes/Dataku/03.%20Learning/Membangun%20Sisten%20ML%20-%20Dicoding/SMSML_Ardena-Afif-Pratama/2.Membangun_Model/mlruns/0/40164705f0b948b48336595984cf8ec3/artifacts
+end_time: 1749405345072
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40164705f0b948b48336595984cf8ec3
+run_name: treasured-smelt-803
+run_uuid: 40164705f0b948b48336595984cf8ec3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749405342387
+status: 3
+tags: []
+user_id: ardena

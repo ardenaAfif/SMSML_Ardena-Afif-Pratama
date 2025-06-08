@@ -1,0 +1,15 @@
+artifact_uri: file:///Volumes/Dataku/03.%20Learning/Membangun%20Sisten%20ML%20-%20Dicoding/SMSML_Ardena-Afif-Pratama/2.Membangun_Model/mlruns/0/e249143c7ea340f88205ed5ac0cf261a/artifacts
+end_time: 1749405274308
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e249143c7ea340f88205ed5ac0cf261a
+run_name: indecisive-duck-497
+run_uuid: e249143c7ea340f88205ed5ac0cf261a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749405271519
+status: 3
+tags: []
+user_id: ardena
